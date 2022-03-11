@@ -11,6 +11,11 @@
 </head>
 
 <body class = "background">
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="https://github.com/umakiyer/plotly_deployment.git">Link to GitHub
+      Repository</a>
+  </nav>
 <!-- Start of dashBoard -->
   <div class="container">
     <!-- Jumberton -->
@@ -24,9 +29,9 @@
 
    
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-3">
         <div class="well">
-          <h5>Test Subject ID No.:</h5>
+          <h5><b>Test Subject ID No.:</b></h5>
           <!-- <select id="selDataset"></select> -->
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
@@ -38,7 +43,7 @@
         </div>
       </div>
 
-      <div class="col-md-5">
+      <div class="col-md-4">
         <div id="bar"></div>
       </div>
       <div class="col-md-5">
@@ -53,7 +58,7 @@
       </div>
     </div>
     <br>
-    
+        
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>

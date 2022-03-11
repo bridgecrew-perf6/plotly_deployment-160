@@ -12,3 +12,15 @@ body {
     /*margin-bottom: -5px;*/
      margin-bottom: 0px
   }
+  
+  .panel-primary>.panel-heading {
+    color: #fff;
+    background-color: #440ae2;
+    border-color: #337ab7;
+}
+
+text.gtitle {
+  color: #fff;
+  background-color: #33b73e;
+  border-color: #337ab7;
+}

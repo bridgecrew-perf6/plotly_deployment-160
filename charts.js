@@ -102,7 +102,7 @@ function buildCharts(sample) {
     ];
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: `Top Ten OTU IDS ${sample}`,
+      title: `<b>Top Ten OTU IDS ${sample}</b>`,
       xaxis: { title: "Sample Values" },
       yaxis: { title: "OTU IDS" },
       height: 00,
@@ -130,23 +130,25 @@ function buildCharts(sample) {
 
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-      title: 'Bacteria Culture Per Sample ',
+      title: '<b>Bacteria Culture Per Sample</b> ',
       xaxis: { title: "OTU ID" },
       
     };
 
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
+    
 
     // 4. Create the trace for the gauge chart.
     var gaugeData = [
-      {
+      { domain: { x: [0, 1], y: [0, 1] },
         value: wFrequency,
         type: "indicator",
-        mode: "gauge+number",
-        title: { text: "Scrubs per Week", font: { size: 16 } },
-        guage: {
-          axis: { range: [null, 10], tickwidth: 1, tickcolor: "darkblue" },
+        mode: "gauge+number+delta",
+        
+        title: { text: "Scrubs per Week", font: { size: 16 }, },
+        gauge: {
+          axis: { range: [null, 10] },
           bar: { color: "black" },
           bgcolor: "white",
           borderwidth: 2,
@@ -155,7 +157,7 @@ function buildCharts(sample) {
             { range: [0, 2], color: "red" },
             { range: [2, 4], color: "orange"},
             { range: [4, 6], color: "yellow" },
-            { range: [6, 8], color: "light green" },
+            { range: [6, 8], color: "lightgreen" },
             { range: [8, 10], color: "green" },
           ]
         }
@@ -164,10 +166,10 @@ function buildCharts(sample) {
 
   //   // 5. Create the layout for the gauge chart.
     var gaugeLayout = {
-      title: 'Belly Button Washing Frequncy',
-      width: 500,
-      height: 450,
-      margin: { t: 25, r: 25, l: 25, b: 25 },
+      title: '<b>Belly Button Washing Frequncy</b>',
+      // width: 500,
+      // height: 450,
+      margin: true,
      
 
     };
